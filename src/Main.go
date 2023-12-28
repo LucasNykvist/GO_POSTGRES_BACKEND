@@ -32,5 +32,8 @@ func serveApplicaton() {
 	router := gin.Default()
 	router.POST("/snuses", controllers.CreateSnus)
 	router.GET("/snuses", controllers.GetSnuses)
+	router.GET("/snuses/:brand", controllers.GetByBrand)
+	router.DELETE("/snuses/:id", controllers.DeleteSnus)
+	router.PUT("/snuses/:id", controllers.UpdateSnus)
 	router.Run(":8080")
 }

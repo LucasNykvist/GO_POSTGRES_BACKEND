@@ -8,8 +8,8 @@ import (
 
 type Snus struct {
 	gorm.Model
-	Brand string `gorm:"size:255;not null;unique" json:"brand"`
-	Flavour string `gorm:"size:255;not null;unique" json:"flavour"`
+	Brand string `gorm:"size:255;not null;" json:"brand"`
+	Flavour string `gorm:"size:255;not null;" json:"flavour"`
 	Price float64 `gorm:"size:255;not null;" json:"price"`
 }
 
